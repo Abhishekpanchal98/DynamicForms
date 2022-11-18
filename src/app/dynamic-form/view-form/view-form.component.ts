@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 interface JsonFormValidators {
   min?: number;
@@ -37,6 +37,9 @@ export interface JsonFormData {
 })
 
 export class ViewFormComponent implements OnInit {
+
+  @Input() jsonFormData: JsonFormData;
+  public formData: JsonFormData;
 
   constructor() { }
 
